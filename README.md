@@ -1,1 +1,0 @@
-# WebTech-SS2021-Projekt-Movie-Explorer
