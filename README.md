@@ -26,7 +26,7 @@ Im Rahmen Ihres Abschlussprojektes implementieren Sie eine Webanwendung, die der
 
 1. Der erste Teil liefert die Datenbasis für den zweiten Teil des Projekts. Hierfür sollen Sie mit Hilfe des Skripts _Movie-Explorer Data-Importer_ eine Datenbank mit den Filmdaten erstellen. Gestalten Sie ein geeignetes Datenbankschema und halten Sie sich dabei an die im Kurs besprochenen Normalisierungsregeln.
 
-2. Der zweite Teil des Projekts ist die eigentliche Webanwendung, in die Sie die Datenbank aus Teil 1 einbinden und anschließend die geforderten Funktionalitäten umsetzen.
+2. Der zweite Teil des Projekts ist die eigentliche Webanwendung, in die Sie die Datenbank aus Teil 1 einbinden und anschließend die in den Anforderungen geforderten Funktionalitäten umsetzen.
 
 ## Vorgaben
 
@@ -38,6 +38,9 @@ Die zu persistierenden Daten werden in einer SQLite-Datenbank gespeichert. Zur G
 
 ## Starten der Anwendung
 
+Um die Anwendung korrekt auszuführen, wird ein lokaler Webserver benötigt, welcher direkt über die _Node.js_-Umgebung gestartet werden kann. Installieren Sie _Node.js_ über die entsprechende Installationsdatei für Ihr Betriebssystem, die Sie [\textcolor{blue}{hier}](
+) herunterladen können. Öffnen Sie dann den Projektordner in _Visual Studio Code_ und Starten Sie das [\textcolor{blue}{integrierte Terminal}](https://code.visualstudio.com/docs/editor/integrated-terminal). Führen Sie dort den Befehl **npm install** aus, um das Projekt vorzubereiten. Dannach können Sie über die Eingabe des Befehls **npm start** den Server starten und den Client im Browser über die Adresse **http://localhost:8080/** aufrufen. Wenn Sie im integrierten Terminal die Tastenkombination **STRG** + **C** drücken und die Eingabe bestätigen, wird der Server beendet.
+
 ## Anforderungen
 
 ### Teil 1: Importer
@@ -46,7 +49,7 @@ Importieren Sie **alle** der in [diesem Archiv]() bereitgestellten Filmdaten in 
 
 ### Teil 2: Webanwendung
 
-Das wesentliche Ziel des Projektes ist es, die bereitgestellten Daten über Ihre Datenbank in das System einzupflegen und im Anschluss für die NutzerInnen, auf verschiedene Art und Weise visuell aufbereitet, zugänglich zu machen. Ihre Applikation benötigt hierfür mindestens drei Seiten:
+Das Hauptziel des Projekts besteht darin, die bereitgestellten Daten über Ihre Datenbank in das System einzugeben und sie dann den Benutzern auf verschiedene visuelle Weise zugänglich zu machen. Ihre Applikation benötigt hierfür mindestens drei Seiten:
 
 1. Eine Startseite, die beim Start Ihrer Anwendung angezeigt wird. Dort sollen die am neuesten zur Datenbank hinzugefügten Filme mit wichtigen Informationen (z.B. Titel, Erscheinungsjahr und Genre) als Überblick in Spalten-/Listenansicht dargstellt werden. Zudem sollen allgemeine Informationen und Metriken bezüglich der in der Datenbank gespeicherten Filme angezeigt werden (z.B. Anzahl enthaltener Filme, Genre mit den meisten Filmen, Jahrgang mit den meisten Neuerscheinungen, etc. ).
 
