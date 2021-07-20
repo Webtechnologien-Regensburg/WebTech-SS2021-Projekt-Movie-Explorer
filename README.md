@@ -67,17 +67,17 @@ Das Hauptziel des Projekts besteht darin, die bereitgestellten Daten über Ihre 
         "nodes": [
             {
                 "id":1,
-                "name": "Webtechnologien SS2021",
+                "caption": "Webtechnologien SS2021",
                 "root": true
-            }
+            },
             {
                 "id": 2,
-                "name": "Alexander Bazo",
+                "caption": "Alexander Bazo",
                 "type": "lecturer"
             },
             {
                 "id": 3,
-                "name": "Jakob Fehle",
+                "caption": "Jakob Fehle",
                 "type": lecturer"
             },
 
