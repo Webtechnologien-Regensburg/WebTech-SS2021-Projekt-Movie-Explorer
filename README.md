@@ -34,7 +34,7 @@ Im [_\textcolor{blue}{Starterpaket}_](https://github.com/Webtechnologien-Regensb
 
 Verwenden Sie das Ihnen zur Verfügung gestellte Starter-Paket, um die Webanwendung (Teil 2 des Projekts) zu implementieren. Das Starter-Paket enthält die Ihnen bekannten node.js Module (`index.js`, `Database.js`) zur Realisierung des Webservers sowie Module, die für die clientseitigen Funktionalitäten der Anwendung zuständig sind (`app.js`, `FetchHelper.js`). Nutzen sie die bestehenden Module und entwickeln sie diese weiter, und erweitern Sie die Anwendung darüber hinaus auch um zusätzliche Module, um Ihre Applikation modularisiert aufzubauen. 
 
-Über die bereits existierende Klasse `FetchHelper` können Sie vordefinierte Anfragen an Ihren Webserver senden. Sie können allerdings auch die Client-seitige Kommunikation mit dem Webserver eigenständig implementieren und/oder die bereits bestehende Klasse abändern und so auf Ihre Bedürfnisse zuschneiden.
+Über die bereits existierende Klasse `FetchHelper` können Sie vordefinierte Anfragen (`GET`/`POST`) an Ihren Webserver senden. Es bleibt Ihnen allerdings offen, ob Sie die Client-seitige Kommunikation mit dem Webserver eigenständig implementieren und/oder die bereits bestehende Klasse verwenden und ggfs. abändern und so auf Ihre Bedürfnisse zuschneiden.
 
 Die zu persistierenden Daten werden in einer SQLite-Datenbank gespeichert. Zur Gestaltung der Benutzeroberfläche verwenden Sie HTML & CSS. Die Graphen-ähnliche Aufbereitung der Datenbank soll mit der Javascript-Bibliothek [_Alchemy_](https://graphalchemist.github.io/Alchemy/#/) gestaltet werden.
 
