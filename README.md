@@ -46,15 +46,15 @@ Um die Anwendung korrekt auszuführen, wird ein lokaler Webserver benötigt, wel
 
 ### Teil 1: Importer
 
-Importieren Sie **alle** der in [_diesem Archiv_](https://files.mi.ur.de/f/a09ba990e8604ed7a3f6/?dl=1) bereitgestellten Filmdaten in eine SQLite-Datenbank. Entwerfen Sie dazu zuerst ein passenden Datenbankschema (mit Relationen für Filme, Genres und SchauspielerInnen), um die Filmeinträge vollumfänglich in der Datenbank zu repräsentieren. Beachten Sie die im Kurs besprochenen Normalisierungsregeln und denken Sie bereits an dieser Stelle an die Anforderungen, die sich aus Aufgabenteil 2 für das Schema ergeben. Verwenden Sie für den automatischen Import das Skript, das wir Ihnen [_hier_](https://github.com/Webtechnologien-Regensburg/Movie-Explorer-Data-Importer) bereitstellen. **Diesen, in JavaScript bzw. für _Node.js_ geschriebenen, Importer müssen Sie an einigen Stellen noch selbständig anpassen.** Der angepasste Skript ist Teil des Projekts und wird zusammen mit der Lösung aus Aufgabenteil 2 eingereicht.
+Importieren Sie **alle** der in [_diesem Archiv_](https://files.mi.ur.de/f/a09ba990e8604ed7a3f6/?dl=1) bereitgestellten Filmdaten in eine SQLite-Datenbank. Entwerfen Sie dazu zuerst ein passenden Datenbankschema (mit Relationen für Filme, Genres und SchauspielerInnen), um die Filmeinträge vollumfänglich in der Datenbank zu repräsentieren. Beachten Sie die im Kurs besprochenen Normalisierungsregeln, denken Sie an die Anforderungen, die sich aus Aufgabenteil 2 für das Schema ergeben und vergessen Sie nicht einmalige Identifizierer (IDs) für jeden Film-Eintrag zu vergeben, um diese auch nachträglich noch eindeutlich ansprechen zu können. Verwenden Sie für den automatischen Import das Skript, das wir Ihnen [_hier_](https://github.com/Webtechnologien-Regensburg/Movie-Explorer-Data-Importer) bereitstellen. **Diesen, in JavaScript bzw. für _Node.js_ geschriebenen, Importer müssen Sie an einigen Stellen noch selbständig anpassen.** Der angepasste Skript ist Teil des Projekts und wird zusammen mit der Lösung aus Aufgabenteil 2 eingereicht.
 
 ### Teil 2: Webanwendung
 
-Das Hauptziel des Projekts besteht darin, die bereitgestellten Daten über Ihre Datenbank in das System einzugeben und sie dann den Benutzern auf verschiedene visuelle Weise zugänglich zu machen. Ihre Applikation benötigt hierfür mindestens drei Seiten:
+Das Hauptziel des Projekts besteht darin, die bereitgestellten Daten über Ihre Datenbank in das System einzugeben und anschließend den Benutzern auf verschiedene visuelle Weise zugänglich zu machen. Ihre Applikation benötigt hierfür mindestens drei Seiten:
 
 1. Eine Startseite, die beim Start Ihrer Anwendung angezeigt wird. Dort sollen die am neuesten zur Datenbank hinzugefügten Filme mit wichtigen Informationen (z.B. Posterbild, Titel, Erscheinungsjahr und Genre) als Überblick in Spalten-/Listenansicht dargstellt werden. Zudem sollen allgemeine Informationen und Metriken bezüglich der in der Datenbank gespeicherten Filme ausgegeben werden (z.B. Anzahl enthaltener Filme, neu hinzugefügte Filme, Genre mit den meisten Filmen, Jahrgang mit den meisten Neuerscheinungen, etc. ).
 
-2. Eine Unterseite, mit dieser NutzerInnen über eine graphische Schnittstelle neue Filmeinträge zur Datenbank hinzuzufügen können. Hierbei kann jeweils der Titel, der Direktor, das Genre, eine beliebige Anzahl von SchauspielerInnen, das Erscheinungsjahr und eine URL zum Filmposter eingegeben werden. Die neuen Einträge werden in der Datenbank, auf verschiedene Tabellen verteilt, persistent gespeichert.
+2. Eine Unterseite, mit dieser NutzerInnen über eine graphische Schnittstelle neue Filmeinträge zur Datenbank hinzuzufügen können. Hierbei kann jeweils der Titel, der Direktor, das Genre, eine beliebige Anzahl an SchauspielerInnen, das Erscheinungsjahr und eine URL zum Filmposter eingegeben werden. Die neuen Einträge werden in der Datenbank, auf verschiedene Tabellen verteilt, persistent gespeichert.
 
 3. Eine Hauptseite, in welcher alle in der Datenbank gespeicherten Daten für eine Exploration aufbereitet und visuell in einer Graphenstruktur angezeigt werden. Verwenden Sie hierfür die Bibliothek [_Alchemy_](https://graphalchemist.github.io/Alchemy/#/), welche auf Basis vordefinierter Datenstrukturen die Integration benutzerdefinierter und interaktiver Graphen anbietet. Informationen bezüglich der Implementation können Sie der [_Dokumentation_](https://graphalchemist.github.io/Alchemy/#/docs) der Bibliothek entnehmen, welche zusätzlich auch [_beispielhafte Implementationen_](https://graphalchemist.github.io/Alchemy/#/examples) verschiedener Graphenstrukturen aufzeigt.
    
@@ -62,38 +62,38 @@ Das Hauptziel des Projekts besteht darin, die bereitgestellten Daten über Ihre 
    
    Um diese Anforderung umzusetzen müssen die in verschiedenen Tabellen gespeicherten Film-Informationen extrahiert, zusammengefügt und an den Client übermittelt werden. Damit die Alchemy-Bibliothek daraus einen Graphen erstellen kann, müssen die Daten zusätzlich in JavaScript-/JSON-Objekte mit, von der Bibliothek, vorgegebener Objektstruktur transformiert werden. Die jeweils benötigte Objektstruktur, zusammengesetzt aus Knoten und Kanten des Graphen, kann der `Dokumentation` oder den `beispielhaften Implementationen` der Bibliothek entnommen werden. Ein Auszug eines solchen Objekts ist im nachfolgenden Code-Snippet zu sehen, welches einen Graphen mit den Dozenten des WebTechnologien-Kurses des SS2021 darstellt:
    
-```
-{
-    "nodes": [
-        {
-            "id":1,
-            "name": "Webtechnologien SS2021",
-            "root": true
-        }
-        {
-            "id": 2,
-            "name": "Alexander Bazo",
-            "type": "lecturer"
-        },
-        {
-            "id": 3,
-            "name": "Jakob Fehle",
-            "type": lecturer"
-        },
+    ```
+    {
+        "nodes": [
+            {
+                "id":1,
+                "name": "Webtechnologien SS2021",
+                "root": true
+            }
+            {
+                "id": 2,
+                "name": "Alexander Bazo",
+                "type": "lecturer"
+            },
+            {
+                "id": 3,
+                "name": "Jakob Fehle",
+                "type": lecturer"
+            },
 
-    ],
-    "edges": [
-        {
-            "source": 1,
-            "target": 2
-        },
-        {
-            "source": 1,
-            "target": 3
-        }
-    ]
-}
-```
+        ],
+        "edges": [
+            {
+                "source": 1,
+                "target": 2
+            },
+            {
+                "source": 1,
+                "target": 3
+            }
+        ]
+    }
+    ```
 
 
 Orientieren Sie sich für die Gestaltung der drei Seiten an den im Folgenden dargestellten Skizzen der Benutzeroberfläche.
