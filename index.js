@@ -12,9 +12,12 @@ function initDatabase() {
 }
 
 function onTestRequest(request, response) {
+    console.log(request.body);
+
     let msg = {
         text: "It Works",
     };
+    
     response.status(200).send(JSON.stringify(msg));
 }
 
@@ -24,7 +27,7 @@ function initExpress() {
     app.use(express.json());
 
     // Test-Route für Server-Client-Verbindung (siehe oben), bitte vor Abgabe entfernen!
-    app.get("/test", onTestRequest);
+    app.post("/test", onTestRequest);
 
     app.listen(HTTP_PORT, function () {
         console.log("Movie Explorer Server listening on Port " + HTTP_PORT);
