@@ -22,7 +22,7 @@ header-includes: |
 
 ## Aufgabenstellung
 
-Im Rahmen Ihres Abschlussprojektes implementieren Sie eine Webanwendung, die der Darstellung und Exploration einer Film-Datenbank dient. Mit Hilfe der Anwendung sollen NutzerInnen einen Überblick über die in der Datenbank gespeicherten Filme erhalten und diese editieren und auf verschiedene Weise visualisieren können. Hierzu soll die Javascript-Bibliothek [Alchemy](https://graphalchemist.github.io/Alchemy/#/) verwendet werden, um eine explorierbare Graphen-ähnliche Ansicht aller Filme zu erstellen. Zur Implementierung des Projekts setzen Sie die im Kurs erworbenen Fähigkeiten und die dort besprochenen Technologien und Techniken ein. Das Projekt besteht aus zwei Teilen:
+Im Rahmen Ihres Abschlussprojektes implementieren Sie eine Webanwendung, die der Darstellung und Exploration einer Film-Datenbank dient. Mit Hilfe der Anwendung sollen NutzerInnen einen Überblick über die in der Datenbank gespeicherten Filme erhalten und diese editieren und auf verschiedene Weise visualisieren können. Hierzu soll die Javascript-Bibliothek [_Alchemy_](https://graphalchemist.github.io/Alchemy/#/) verwendet werden, um eine explorierbare Graphen-ähnliche Ansicht aller Filme zu erstellen. Zur Implementierung des Projekts setzen Sie die im Kurs erworbenen Fähigkeiten und die dort besprochenen Technologien und Techniken ein. Das Projekt besteht aus zwei Teilen:
 
 1. Der erste Teil liefert die Datenbasis für den zweiten Teil des Projekts. Hierfür sollen Sie mit Hilfe des Skripts _Movie-Explorer Data-Importer_ eine Datenbank mit den Filmdaten erstellen. Gestalten Sie ein geeignetes Datenbankschema und halten Sie sich dabei an die im Kurs besprochenen Normalisierungsregeln.
 
@@ -30,37 +30,37 @@ Im Rahmen Ihres Abschlussprojektes implementieren Sie eine Webanwendung, die der
 
 ## Vorgaben
 
-Im [\textcolor{blue}{Starterpaket}]() finden Sie ein angefangenes Projekt, welches bereits die grobe Ordner- und Dateistruktur der Anwendung vorgibt.
+Im [_\textcolor{blue}{Starterpaket}_]() finden Sie ein angefangenes Projekt, welches bereits die grobe Ordner- und Dateistruktur der Anwendung vorgibt.
 
 Die Implementierung der Anwendung erfolgt auf der im Kurs gelernten Technologien. Verwenden Sie das Ihnen zur Verfügung gestellte Starter-Paket, um die Webanwendung (Teil 2 des Projekts) zu implementieren. Das Starter-Paket enthält die Ihnen bekannten node.js Module (`index.js`, `Database.js`) sowie Module, die für die clientseitigen Funktionalitäten der Anwendung zuständig sind (`app.js`, `FetchHelper.js`). Nutzen sie die bestehenden Module und entwickeln sie diese weiter, und erweitern Sie die Anwendung darüber hinaus auch um zusätzliche Module, um Ihre Applikation modularisiert aufzubauen.
 
-Die zu persistierenden Daten werden in einer SQLite-Datenbank gespeichert. Zur Gestaltung der Benutzeroberfläche verwenden Sie HTML & CSS. Die Graphen-ähnliche Aufbereitung der Datenbank soll mit der Javascript-Bibliothek [_Alchemy_]() gestaltet werden.
+Die zu persistierenden Daten werden in einer SQLite-Datenbank gespeichert. Zur Gestaltung der Benutzeroberfläche verwenden Sie HTML & CSS. Die Graphen-ähnliche Aufbereitung der Datenbank soll mit der Javascript-Bibliothek [_Alchemy_](https://graphalchemist.github.io/Alchemy/#/) gestaltet werden.
 
 ## Starten der Anwendung
 
-Um die Anwendung korrekt auszuführen, wird ein lokaler Webserver benötigt, welcher direkt über die _Node.js_-Umgebung gestartet werden kann. Installieren Sie _Node.js_ über die entsprechende Installationsdatei für Ihr Betriebssystem, die Sie [\textcolor{blue}{hier}](
-) herunterladen können. Öffnen Sie dann den Projektordner in _Visual Studio Code_ und Starten Sie das [\textcolor{blue}{integrierte Terminal}](https://code.visualstudio.com/docs/editor/integrated-terminal). Führen Sie dort den Befehl **npm install** aus, um das Projekt vorzubereiten. Dannach können Sie über die Eingabe des Befehls **npm start** den Server starten und den Client im Browser über die Adresse **http://localhost:8080/** aufrufen. Wenn Sie im integrierten Terminal die Tastenkombination **STRG** + **C** drücken und die Eingabe bestätigen, wird der Server beendet.
+Um die Anwendung korrekt auszuführen, wird ein lokaler Webserver benötigt, welcher direkt über die _Node.js_-Umgebung gestartet werden kann. Installieren Sie _Node.js_ über die entsprechende Installationsdatei für Ihr Betriebssystem, die Sie [_\textcolor{blue}{hier}_](https://nodejs.org/en/download/) herunterladen können. Öffnen Sie dann den Projektordner in _Visual Studio Code_ und Starten Sie das [_\textcolor{blue}{integrierte Terminal}_](https://code.visualstudio.com/docs/editor/integrated-terminal). Führen Sie dort den Befehl **npm install** aus, um das Projekt vorzubereiten. Dannach können Sie über die Eingabe des Befehls **npm start** den Server starten und den Client im Browser über die Adresse **http://localhost:8080/** aufrufen. Wenn Sie im integrierten Terminal die Tastenkombination **STRG** + **C** drücken und die Eingabe bestätigen, wird der Server beendet.
 
 ## Anforderungen
 
 ### Teil 1: Importer
 
-Importieren Sie **alle** der in [diesem Archiv]() bereitgestellten Filmdaten in eine SQLite-Datenbank. Entwerfen Sie dazu zuerst ein passenden Datenbankschema, um die Filme vollumfänglich in der Datenbank zu repräsentieren. Beachten Sie die im Kurs besprochenen Normalisierungsregeln und denken Sie bereits an dieser Stelle an die zusätzlichen Anforderungen, die sich aus Aufgabenteil 2 für das Schema ergeben. Verwenden Sie für den automatischen Import das Skript, das wir Ihnen [_hier_]() bereitstellen. **Diesen, in JavaScript bzw. für _Node.js_ geschriebenen, Importer müssen Sie an einigen Stellen noch selbständig anpassen.** Der angepasste Skript ist Teil des Projekts und wird zusammen mit der Lösung aus Aufgabenteil 2 eingereicht.
+Importieren Sie **alle** der in [_diesem Archiv_]() bereitgestellten Filmdaten in eine SQLite-Datenbank. Entwerfen Sie dazu zuerst ein passenden Datenbankschema (mit Relationen für Filme, Genres und SchauspielerInnen), um die Filmeinträge vollumfänglich in der Datenbank zu repräsentieren. Beachten Sie die im Kurs besprochenen Normalisierungsregeln und denken Sie bereits an dieser Stelle an die Anforderungen, die sich aus Aufgabenteil 2 für das Schema ergeben. Verwenden Sie für den automatischen Import das Skript, das wir Ihnen [_hier_](https://github.com/Webtechnologien-Regensburg/Movie-Explorer-Data-Importer) bereitstellen. **Diesen, in JavaScript bzw. für _Node.js_ geschriebenen, Importer müssen Sie an einigen Stellen noch selbständig anpassen.** Der angepasste Skript ist Teil des Projekts und wird zusammen mit der Lösung aus Aufgabenteil 2 eingereicht.
 
 ### Teil 2: Webanwendung
 
 Das Hauptziel des Projekts besteht darin, die bereitgestellten Daten über Ihre Datenbank in das System einzugeben und sie dann den Benutzern auf verschiedene visuelle Weise zugänglich zu machen. Ihre Applikation benötigt hierfür mindestens drei Seiten:
 
-1. Eine Startseite, die beim Start Ihrer Anwendung angezeigt wird. Dort sollen die am neuesten zur Datenbank hinzugefügten Filme mit wichtigen Informationen (z.B. Titel, Erscheinungsjahr und Genre) als Überblick in Spalten-/Listenansicht dargstellt werden. Zudem sollen allgemeine Informationen und Metriken bezüglich der in der Datenbank gespeicherten Filme angezeigt werden (z.B. Anzahl enthaltener Filme, Genre mit den meisten Filmen, Jahrgang mit den meisten Neuerscheinungen, etc. ).
+1. Eine Startseite, die beim Start Ihrer Anwendung angezeigt wird. Dort sollen die am neuesten zur Datenbank hinzugefügten Filme mit wichtigen Informationen (z.B. Posterbild, Titel, Erscheinungsjahr und Genre) als Überblick in Spalten-/Listenansicht dargstellt werden. Zudem sollen allgemeine Informationen und Metriken bezüglich der in der Datenbank gespeicherten Filme ausgegeben werden (z.B. Anzahl enthaltener Filme, neu hinzugefügte Filme, Genre mit den meisten Filmen, Jahrgang mit den meisten Neuerscheinungen, etc. ).
 
-2. Eine Unterseite, mit dieser NutzerInnen über eine graphische Schnittstelle neue Filmeinträge zur Datenbank hinzuzufügen können. Hierbei kann jeweils der Titel, der Prodzuent, eine beliebige Anzahl von Schauspielern, das Erscheinungsjahr und eine Beschreibung eingegeben werden. Die neuen Einträge werden in der Datenbank, auf verschiedene Tabellen verteilt, persistent gespeichert.
+2. Eine Unterseite, mit dieser NutzerInnen über eine graphische Schnittstelle neue Filmeinträge zur Datenbank hinzuzufügen können. Hierbei kann jeweils der Titel, der Direktor, das Genre, eine beliebige Anzahl von SchauspielerInnen, das Erscheinungsjahr und eine URL zum Filmposter eingegeben werden. Die neuen Einträge werden in der Datenbank, auf verschiedene Tabellen verteilt, persistent gespeichert.
 
-3. Eine Hauptseite, in welcher alle in der Datenbank gespeicherten Daten für eine Exploration aufbereitet und visuell in einer Graphenstruktur angezeigt werden. Verwenden Sie hierfür die Bibliothek Alchemy, welche auf Basis vordefinierter Datenstrukturen die Integration benutzerdefinierter und interaktiver Graphen anbietet. Informationen bezüglich der Implementation können Sie der [Dokumentation]() der Bibliothek entnehmen, welche zusätzlich auch [beispielhafte Implementationen]() verschiedener Graphenstrukturen aufzeigt.
-   Innerhalb des Graphen sollen Cluster bezüglich der Genre der Filme erstellt werden. Die SchauspielerInnen der Filme werden einmalig als Datenpunkte dargestellt und mit allen Filmen verbunden, in welchen die SchauspielerInnen mitspielen. Bis auf die wenigen Vorgaben ist die Umsetzung des Graphen Ihnen überlassen, achten Sie jedoch auf eine visuell ansehnliche und zugleich informative Darstellungsform. Es können auch mehrere Graphen mit unterschiedlichen Schwerpunkten der Information, die Sie visualisieren möchten, erstellt werden.
+3. Eine Hauptseite, in welcher alle in der Datenbank gespeicherten Daten für eine Exploration aufbereitet und visuell in einer Graphenstruktur angezeigt werden. Verwenden Sie hierfür die Bibliothek [_Alchemy_](https://graphalchemist.github.io/Alchemy/#/), welche auf Basis vordefinierter Datenstrukturen die Integration benutzerdefinierter und interaktiver Graphen anbietet. Informationen bezüglich der Implementation können Sie der [_Dokumentation_](https://graphalchemist.github.io/Alchemy/#/docs) der Bibliothek entnehmen, welche zusätzlich auch [_beispielhafte Implementationen_](https://graphalchemist.github.io/Alchemy/#/examples) verschiedener Graphenstrukturen aufzeigt.
+   
+   Innerhalb des Graphen sollen Cluster bezüglich der Genre der Filme erstellt werden. Die SchauspielerInnen der Filme werden einmalig als Datenpunkte dargestellt und mit allen Filmen verbunden, in welchen die SchauspielerInnen mitspielen. Bis auf diese wenigen Vorgaben ist die Umsetzung und Gestaltung des Graphen Ihnen überlassen, achten Sie jedoch auf eine visuell ansehnliche und zugleich informative Darstellungsform.
 
 Orientieren Sie sich für die Gestaltung der drei Seiten an den im Folgenden dargestellten Skizzen der Benutzeroberfläche.
 
-## Hinweise zum Vorgehen
+**Achten Sie auf bisher gelernte Prinzipien zur Code-Qualität, verteilen Sie Ihren Code entsprechend auf verschiedene Dateien, Methoden und Klassen und kommentieren Sie Ihre Lösung ausreichend.**
 
 ### Skizzen der Benutzeroberfläche
 
@@ -80,11 +80,11 @@ beachten Sie dabei jedoch, dass die Skizzen lediglich die Struktur und den Inhal
 
 ### Hilfestellung und Feedback
 
-Sollten Sie während der Arbeit an Ihrem Projekt Fragen haben oder Hilfestellungen benötigen, können Sie uns per Mail kontaktieren. Zusätzlich dazu bieten wir Ihnen folgende Termine an, um Ihnen die Möglichkeit zu geben, den Start und die Finalisierung des Projekts zu besprechen. Wir werden für beide Zeiträume Terminumfragen verschicken und mit Ihnen einen Zeitslot festlegen.
+Sollten Sie während der Arbeit an Ihrem Projekt Fragen haben oder Hilfestellungen benötigen, können Sie uns per Mail oder Discord kontaktieren. Zusätzlich dazu bieten wir Ihnen folgende Termine an, um Ihnen die Möglichkeit zu geben, den Start und die Finalisierung des Projekts zu besprechen. Wir werden für beide Zeiträume Terminumfragen verschicken und mit Ihnen einen Zeitslot festlegen.
 
-**Zwischen . und . Juli:** Projekt-Kickoff zum Klären offener Fragen und zum Abstimmen des Vorgehens.
+**Zwischen 26. und 30. Juli:** Projekt-Kickoff zum Klären offener Fragen und zum Abstimmen des Vorgehens.
 
-**Zwischen . und . September:** Finale Besprechung des aktuellen Stands vor der Abgabe.
+**Mitte September:** Finale Besprechung des aktuellen Stands vor der Abgabe.
 
 ### Abgabekriterien
 
