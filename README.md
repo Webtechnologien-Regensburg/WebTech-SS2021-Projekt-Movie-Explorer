@@ -46,7 +46,7 @@ Um die Anwendung korrekt auszuführen, wird ein lokaler Webserver benötigt, wel
 
 ### Teil 1: Importer
 
-Importieren Sie **alle** der in [_diesem Archiv_](https://files.mi.ur.de/f/a09ba990e8604ed7a3f6/?dl=1) bereitgestellten Filmdaten in eine SQLite-Datenbank. Entwerfen Sie dazu zuerst ein passenden Datenbankschema (mit Relationen für Filme, Genres und SchauspielerInnen), um die Filmeinträge vollumfänglich in der Datenbank zu repräsentieren. Beachten Sie die im Kurs besprochenen Normalisierungsregeln, denken Sie an die Anforderungen, die sich aus Aufgabenteil 2 für das Schema ergeben und vergessen Sie nicht einmalige Identifizierer (IDs) für jeden Film-Eintrag zu vergeben, um diese auch nachträglich noch eindeutlich ansprechen zu können. Verwenden Sie für den automatischen Import das Skript, das wir Ihnen [_hier_](https://github.com/Webtechnologien-Regensburg/Movie-Explorer-Data-Importer) bereitstellen. **Diesen, in JavaScript bzw. für _Node.js_ geschriebenen, Importer müssen Sie an einigen Stellen noch selbständig anpassen.** Der angepasste Skript ist Teil des Projekts und wird zusammen mit der Lösung aus Aufgabenteil 2 eingereicht.
+Importieren Sie **alle** der in [_diesem Archiv_](https://files.mi.ur.de/f/a09ba990e8604ed7a3f6/?dl=1) bereitgestellten Filmdaten in eine SQLite-Datenbank. Entwerfen Sie dazu zuerst ein passenden Datenbankschema (mit Tabellen für Filme, Genres und SchauspielerInnen), um die Filmeinträge vollumfänglich in der Datenbank zu repräsentieren. Beachten Sie die im Kurs besprochenen Normalisierungsregeln, denken Sie an die Anforderungen, die sich aus Aufgabenteil 2 für das Schema ergeben und vergessen Sie nicht einmalige Identifizierer (IDs) für jeden Film-Eintrag zu vergeben, um diese auch nachträglich noch eindeutlich ansprechen zu können. Verwenden Sie für den automatischen Import das Skript, das wir Ihnen [_hier_](https://github.com/Webtechnologien-Regensburg/Movie-Explorer-Data-Importer) bereitstellen. **Diesen, in JavaScript bzw. für _Node.js_ geschriebenen, Importer müssen Sie an einigen Stellen noch selbständig anpassen.** Der angepasste Skript ist Teil des Projekts und wird zusammen mit der Lösung aus Aufgabenteil 2 eingereicht.
 
 ### Teil 2: Webanwendung
 
@@ -60,7 +60,7 @@ Das Hauptziel des Projekts besteht darin, die bereitgestellten Daten über Ihre 
    
    Innerhalb des Graphen sollen Cluster bezüglich der Genre der Filme erstellt werden. Die SchauspielerInnen der Filme werden einmalig als Datenpunkte dargestellt und mit allen Filmen verbunden, in welchen die SchauspielerInnen mitspielen. Bis auf diese wenigen Vorgaben ist die Umsetzung und Gestaltung des Graphen Ihnen überlassen, achten Sie jedoch auf eine visuell ansehnliche und zugleich informative Darstellungsform.
    
-   Um diese Anforderung umzusetzen müssen die in verschiedenen Tabellen gespeicherten Film-Informationen extrahiert, zusammengefügt und an den Client übermittelt werden. Damit die Alchemy-Bibliothek daraus einen Graphen erstellen kann, müssen die Daten zusätzlich in JavaScript-/JSON-Objekte mit, von der Bibliothek, vorgegebener Objektstruktur transformiert werden. Die jeweils benötigte Objektstruktur, zusammengesetzt aus Knoten und Kanten des Graphen, kann der `Dokumentation` oder den `beispielhaften Implementationen` der Bibliothek entnommen werden. Ein Auszug eines solchen Objekts ist im nachfolgenden Code-Snippet zu sehen, welches einen Graphen mit den Dozenten des WebTechnologien-Kurses des SS2021 darstellt:
+   Um diese Anforderung umzusetzen müssen die in verschiedenen Tabellen gespeicherten Film-Informationen extrahiert, zusammengefügt und an den Client übermittelt werden. Damit die Alchemy-Bibliothek daraus einen Graphen erstellen kann, müssen die Daten zusätzlich in JavaScript-/JSON-Objekte mit, von der Bibliothek, vorgegebener Objektstruktur transformiert werden. Die jeweils benötigte Objektstruktur, zusammengesetzt aus Knoten und Kanten des Graphen, kann der *Dokumentation* oder den *beispielhaften Implementationen* der Bibliothek entnommen werden. Ein Auszug eines solchen Objekts ist im nachfolgenden Code-Snippet zu sehen, welches einen Graphen mit den Dozenten des WebTechnologien-Kurses des SS2021 darstellt:
    
     ```
     {
@@ -98,7 +98,8 @@ Das Hauptziel des Projekts besteht darin, die bereitgestellten Daten über Ihre 
 
 Orientieren Sie sich für die Gestaltung der drei Seiten an den im Folgenden dargestellten Skizzen der Benutzeroberfläche.
 
-**Achten Sie auf bisher gelernte Prinzipien zur Code-Qualität, verteilen Sie Ihren Code entsprechend auf verschiedene Dateien, Methoden und Klassen und kommentieren Sie Ihre Lösung ausreichend.**
+**Allgemein Gilt: Achten Sie auf bisher gelernte Prinzipien zur Code-Qualität, verteilen Sie Ihren Code entsprechend auf verschiedene Dateien, Methoden und Klassen und kommentieren Sie Ihre Lösung ausreichend.**
+
 
 ### Skizzen der Benutzeroberfläche
 
