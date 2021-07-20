@@ -52,7 +52,7 @@ Das wesentliche Ziel des Projektes ist es, die bereitgestellten Daten über Ihre
 
 2. Eine Unterseite, mit dieser NutzerInnen über eine graphische Schnittstelle neue Filmeinträge zur Datenbank hinzuzufügen können. Hierbei kann jeweils der Titel, der Prodzuent, eine beliebige Anzahl von Schauspielern, das Erscheinungsjahr und eine Beschreibung eingegeben werden. Die neuen Einträge werden in der Datenbank, auf verschiedene Tabellen verteilt, persistent gespeichert.
 
-3. Eine Hauptseite, in welcher alle in der Datenbank gespeicherten Daten für eine Exploration aufbereitet und visuell in einer Graphenstruktur angezeigt werden. Verwenden Sie hierfür die Bibliothek Alchemy, welche auf Basis vordefinierter Datenstrukturen die Integration benutzerdefinierter und interaktiver Graphen anbietet. Informationen bezüglich der Implementation können Sie der [Dokumentation]() der Bibliothek entnehmen, welche zusätzlich auch [beispielhafte Implementationen]() verschiedener Graphenstrukturen anbietet.
+3. Eine Hauptseite, in welcher alle in der Datenbank gespeicherten Daten für eine Exploration aufbereitet und visuell in einer Graphenstruktur angezeigt werden. Verwenden Sie hierfür die Bibliothek Alchemy, welche auf Basis vordefinierter Datenstrukturen die Integration benutzerdefinierter und interaktiver Graphen anbietet. Informationen bezüglich der Implementation können Sie der [Dokumentation]() der Bibliothek entnehmen, welche zusätzlich auch [beispielhafte Implementationen]() verschiedener Graphenstrukturen aufzeigt.
    Innerhalb des Graphen sollen Cluster bezüglich der Genre der Filme erstellt werden. Die SchauspielerInnen der Filme werden einmalig als Datenpunkte dargestellt und mit allen Filmen verbunden, in welchen die SchauspielerInnen mitspielen. Bis auf die wenigen Vorgaben ist die Umsetzung des Graphen Ihnen überlassen, achten Sie jedoch auf eine visuell ansehnliche und zugleich informative Darstellungsform. Es können auch mehrere Graphen mit unterschiedlichen Schwerpunkten der Information, die Sie visualisieren möchten, erstellt werden.
 
 Orientieren Sie sich für die Gestaltung der drei Seiten an den im Folgenden dargestellten Skizzen der Benutzeroberfläche.
@@ -72,21 +72,8 @@ beachten Sie dabei jedoch, dass die Skizzen lediglich die Struktur und den Inhal
 
 \pagebreak
 
-### Denkbare Benutzerinteraktion
-
-1. Über die Startseite können NutzerInnen über einen Button-Klick zur Unterseite gelangen, über welche neue Filmeinträge erstellt werden können.
-
-2. Über einen Klick auf die Listenelemente erhalten NutzerInnen die zusätzliche Informationen (z.B. als Zoom-Effekt) zu dem dazugehörigen Film.
-
-3.
 
 ## Projektablauf
-
-### Vorbereitung
-
--   Laden Sie den Quellcode des Starter-Pakets über diesen [_Link_]() herunter.
--   Führen Sie im Projektverzeichnis, in einer Kommandozeile, den Befehl `npm install` aus, um alle notwendigen Abhängigkeiten zu installieren.
--   Erstellen Sie einen Ordner `data` im Projektverzeichnis und kopieren Sie die von Ihnen generierte Datenbank aus Teil 1 dort hinein.
 
 ### Hilfestellung und Feedback
 
