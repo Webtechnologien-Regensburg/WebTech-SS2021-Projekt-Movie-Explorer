@@ -58,7 +58,7 @@ Das Hauptziel des Projekts besteht darin, die bereitgestellten Daten über Ihre 
 
 3. Eine Hauptseite, in welcher alle in der Datenbank gespeicherten Daten für eine Exploration aufbereitet und visuell in einer Graphenstruktur angezeigt werden. Verwenden Sie hierfür die Bibliothek [_Alchemy_](https://graphalchemist.github.io/Alchemy/#/), welche auf Basis vordefinierter Datenstrukturen die Integration benutzerdefinierter und interaktiver Graphen anbietet. Informationen bezüglich der Implementation können Sie der [_Dokumentation_](https://graphalchemist.github.io/Alchemy/#/docs) der Bibliothek entnehmen, welche zusätzlich auch [_beispielhafte Implementationen_](https://graphalchemist.github.io/Alchemy/#/examples) verschiedener Graphenstrukturen aufzeigt.
    
-   Innerhalb des Graphen sollen Cluster bezüglich der Genre der Filme erstellt werden. Die SchauspielerInnen der Filme werden einmalig als Datenpunkte dargestellt und mit allen Filmen verbunden, in welchen die SchauspielerInnen mitspielen. Bis auf diese wenigen Vorgaben ist die Umsetzung und Gestaltung des Graphen Ihnen überlassen, achten Sie jedoch auf eine visuell ansehnliche und zugleich informative Darstellungsform.
+   Innerhalb des Graphen sollen Cluster bezüglich der Genre der Filme erstellt werden. Die SchauspielerInnen der Filme werden einmalig als Datenpunkte dargestellt und mit allen Filmen verbunden, in welchen die SchauspielerInnen mitspielen. Bis auf diese wenigen Vorgaben ist die Umsetzung und Gestaltung des Graphen Ihnen überlassen, achten Sie jedoch auf eine visuell ansehnliche und zugleich informative Darstellungsform. Vergessen Sie nicht, die Eigenschaften des Graphen (z.B. die Farben, Knoten und Kanten) in einem kurzen Text zu erklären.
    
    Um diese Anforderung umzusetzen müssen die in verschiedenen Tabellen gespeicherten Film-Informationen aus der Datenbank extrahiert, zusammengefügt und an den Client übermittelt werden. Damit die Alchemy-Bibliothek daraus einen Graphen erstellen kann, müssen die Daten zusätzlich in JavaScript-/JSON-Objekte mit, von der Bibliothek vorgegebener Objektstruktur, transformiert werden. Die jeweils benötigte Objektstruktur, zusammengesetzt aus den Knoten und Kanten des Graphen, kann der *Dokumentation* oder den *beispielhaften Implementationen* der Bibliothek entnommen werden. Ein Auszug eines solchen Objekts ist im nachfolgenden Code-Snippet zu sehen, welches einen Graphen mit den Dozenten des WebTechnologien-Kurses des SS2021 darstellt:
    
@@ -85,11 +85,13 @@ Das Hauptziel des Projekts besteht darin, die bereitgestellten Daten über Ihre 
         "edges": [
             {
                 "source": 1,
-                "target": 2
+                "target": 2,
+                "caption": "teached by"
             },
             {
                 "source": 1,
-                "target": 3
+                "target": 3,
+                "caption": "teached by"
             }
         ]
     }
