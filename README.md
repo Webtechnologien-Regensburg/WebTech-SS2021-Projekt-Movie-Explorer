@@ -22,11 +22,11 @@ header-includes: |
 
 ## Aufgabenstellung
 
-Im Rahmen Ihres Abschlussprojektes implementieren Sie eine Webanwendung, die der Darstellung und Exploration einer Film-Datenbank dient. Mit Hilfe der Anwendung sollen NutzerInnen einen Überblick über die in der Datenbank gespeicherten Filme erhalten, neue Einträge anlegen und alle Einträge auf verschiedene Weise visualisieren können. Hierzu soll die Javascript-Bibliothek [_Alchemy_](https://graphalchemist.github.io/Alchemy/#/) verwendet werden, um eine explorierbare Graphen-ähnliche Ansicht aller Filme zu erstellen. Zur Implementierung des Projekts setzen Sie die im Kurs erworbenen Fähigkeiten und die dort besprochenen Technologien und Techniken ein. Das Projekt besteht aus zwei Teilen:
+Im Rahmen Ihres Abschlussprojektes implementieren Sie eine Webanwendung, die der Darstellung und Exploration einer Film-Datenbank dient. Mit Hilfe der Anwendung sollen NutzerInnen einen Überblick über die in der Datenbank gespeicherten Filme erhalten, neue Einträge anlegen und alle Einträge auf verschiedene Weise visualisieren können. Hierzu soll die Javascript-Bibliothek [_Alchemy_](https://graphalchemist.github.io/Alchemy/#/) verwendet werden, um eine explorierbare Graphen-ähnliche Ansicht aller Filme zu erstellen. Zur Implementierung des Projekts setzen Sie die im Kurs erworbenen Fähigkeiten sowie die dort besprochenen Technologien und Techniken ein. Das Projekt besteht aus zwei Teilen:
 
 1. Der erste Teil liefert die Datenbasis für den zweiten Teil des Projekts. Hierfür sollen Sie mit Hilfe des Skripts _Movie-Explorer Data-Importer_ eine Datenbank mit den Filmdaten erstellen. Gestalten Sie ein geeignetes Datenbankschema und halten Sie sich dabei an die im Kurs besprochenen Normalisierungsregeln.
 
-2. Der zweite Teil des Projekts ist die eigentliche Webanwendung, in die Sie die Datenbank aus Teil 1 einbinden und anschließend die in den Anforderungen geforderten Funktionalitäten umsetzen.
+2. Der zweite Teil des Projekts ist die eigentliche Webanwendung, in die Sie die Datenbank aus Teil 1 einbinden und anschließend die in den Anforderungen gelisteten Funktionalitäten umsetzen.
 
 ## Vorgaben
 
@@ -52,7 +52,7 @@ Importieren Sie **alle** der in [_diesem Archiv_](https://files.mi.ur.de/f/a09ba
 
 Das Hauptziel des Projekts besteht darin, die bereitgestellten Daten über Ihre Datenbank in das System einzugeben und anschließend den Benutzern auf verschiedene visuelle Weise zugänglich zu machen. Ihre Applikation benötigt hierfür mindestens drei Seiten:
 
-1. Eine Startseite, die beim Start Ihrer Anwendung angezeigt wird. Dort sollen die am neuesten zur Datenbank hinzugefügten Filme mit wichtigen Informationen (z.B. Posterbild, Titel, Erscheinungsjahr und Genre) als Überblick in Spalten-/Listenansicht dargstellt werden. Zudem sollen allgemeine Informationen und Metriken bezüglich der in der Datenbank gespeicherten Filme ausgegeben werden (z.B. Anzahl enthaltener Filme, neu hinzugefügte Filme, Genre mit den meisten Filmen, Jahrgang mit den meisten Neuerscheinungen, etc. ).
+1. Eine Startseite, die beim Start Ihrer Anwendung angezeigt wird. Dort sollen die am neuesten zur Datenbank hinzugefügten Filme mit wichtigen Informationen (z.B. Posterbild, Titel, Erscheinungsjahr und Genre) als Überblick in Spalten-/Listenansicht dargstellt werden. Zudem sollen allgemeine Informationen und Metriken bezüglich der in der Datenbank gespeicherten Filme ausgegeben werden (z.B. die Anzahl enthaltener Filme, neu hinzugefügte Filme, das Genre mit den meisten Filmen, der Jahrgang mit den meisten Neuerscheinungen, etc. ).
 
 2. Eine Unterseite, mit dieser NutzerInnen über eine graphische Schnittstelle neue Filmeinträge zur Datenbank hinzuzufügen können. Hierbei kann jeweils der Titel, der Direktor, das Genre, eine beliebige Anzahl an SchauspielerInnen, das Erscheinungsjahr und eine URL zum Filmposter eingegeben werden. Die neuen Einträge werden in der Datenbank, auf verschiedene Tabellen verteilt, persistent gespeichert.
 
@@ -60,7 +60,7 @@ Das Hauptziel des Projekts besteht darin, die bereitgestellten Daten über Ihre 
    
    Innerhalb des Graphen sollen Cluster bezüglich der Genre der Filme erstellt werden. Die SchauspielerInnen der Filme werden einmalig als Datenpunkte dargestellt und mit allen Filmen verbunden, in welchen die SchauspielerInnen mitspielen. Bis auf diese wenigen Vorgaben ist die Umsetzung und Gestaltung des Graphen Ihnen überlassen, achten Sie jedoch auf eine visuell ansehnliche und zugleich informative Darstellungsform.
    
-   Um diese Anforderung umzusetzen müssen die in verschiedenen Tabellen gespeicherten Film-Informationen extrahiert, zusammengefügt und an den Client übermittelt werden. Damit die Alchemy-Bibliothek daraus einen Graphen erstellen kann, müssen die Daten zusätzlich in JavaScript-/JSON-Objekte mit, von der Bibliothek, vorgegebener Objektstruktur transformiert werden. Die jeweils benötigte Objektstruktur, zusammengesetzt aus Knoten und Kanten des Graphen, kann der *Dokumentation* oder den *beispielhaften Implementationen* der Bibliothek entnommen werden. Ein Auszug eines solchen Objekts ist im nachfolgenden Code-Snippet zu sehen, welches einen Graphen mit den Dozenten des WebTechnologien-Kurses des SS2021 darstellt:
+   Um diese Anforderung umzusetzen müssen die in verschiedenen Tabellen gespeicherten Film-Informationen aus der Datenbank extrahiert, zusammengefügt und an den Client übermittelt werden. Damit die Alchemy-Bibliothek daraus einen Graphen erstellen kann, müssen die Daten zusätzlich in JavaScript-/JSON-Objekte mit, von der Bibliothek vorgegebener Objektstruktur, transformiert werden. Die jeweils benötigte Objektstruktur, zusammengesetzt aus den Knoten und Kanten des Graphen, kann der *Dokumentation* oder den *beispielhaften Implementationen* der Bibliothek entnommen werden. Ein Auszug eines solchen Objekts ist im nachfolgenden Code-Snippet zu sehen, welches einen Graphen mit den Dozenten des WebTechnologien-Kurses des SS2021 darstellt:
    
     ```
     {
@@ -110,7 +110,7 @@ beachten Sie dabei jedoch, dass die Skizzen lediglich die Struktur und den Inhal
 
 ![Seite für neue Einträge](Movie-Explorer-NewEntryPage.png){ height=8cm }
 
-![Visueller Graph für Exploration](Movie-Explorer-Graph.png){ height=8cm }
+![Visueller Graph für Exploration: Orangene und blaue Punkte stehen für Filme der Genres Crime und Drama und grüne Punkte für die SchauspielerInnen der Filme](Movie-Explorer-Graph.png){ height=8cm }
 
 \pagebreak
 
