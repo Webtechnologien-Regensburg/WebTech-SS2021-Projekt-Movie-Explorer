@@ -95,6 +95,7 @@ Das Hauptziel des Projekts besteht darin, die bereitgestellten Daten über Ihre 
     }
     ```
 
+Die Startseite soll mit beiden Unterseiten verbunden sein. Wie Sie diese Verlinkung realisieren ist Ihnen überlassen, achten Sie allerdings auf eine einleuchtende und intuitive Bedienung, um sowohl von der Startseite auf die Unterseiten gelangen zu können als auch von den Unterseiten zurück zur Startseite wechseln zu können. 
 
 Orientieren Sie sich für die Gestaltung der drei Seiten an den im Folgenden dargestellten Skizzen der Benutzeroberfläche.
 
