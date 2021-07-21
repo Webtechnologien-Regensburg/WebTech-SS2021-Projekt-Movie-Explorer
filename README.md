@@ -106,11 +106,11 @@ Orientieren Sie sich für die Gestaltung der drei Seiten an den im Folgenden dar
 Die folgenden Skizzen beschreiben die wesentlichen Bestandteile der Benutzeroberfläche. Bei der Implementierung der Anwendung müssen Sie sich an diesen Vorgaben orientieren. Bitte
 beachten Sie dabei jedoch, dass die Skizzen lediglich die Struktur und den Inhalt der Benutzeroberfläche beschreiben, nicht aber deren finales oder vollständiges Aussehen.
 
-![Startseite](Home.PNG){ height=8cm }
+![Startseite](Movie-Explorer-Startpage.png){ height=8cm }
 
-![Übersichtsseite](Acts.PNG)
+![Seite für neue Einträge](Movie-Explorer-NewEntryPage.png)
 
-![Lese- und Kommentarseite](Scene.PNG){ height=8cm }
+![Visueller Graph für Exploration](Movie-Explorer-Graph.png){ height=8cm }
 
 \pagebreak
 
