@@ -108,7 +108,7 @@ beachten Sie dabei jedoch, dass die Skizzen lediglich die Struktur und den Inhal
 
 ![Startseite](Movie-Explorer-Startpage.png){ height=8cm }
 
-![Seite für neue Einträge](Movie-Explorer-NewEntryPage.png)
+![Seite für neue Einträge](Movie-Explorer-NewEntryPage.png){ height=8cm }
 
 ![Visueller Graph für Exploration](Movie-Explorer-Graph.png){ height=8cm }
 
