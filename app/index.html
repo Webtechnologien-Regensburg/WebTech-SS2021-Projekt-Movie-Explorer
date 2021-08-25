@@ -1,19 +1,27 @@
 <!DOCTYPE html>
 <html lang="de">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="author" content="" />
-        <meta name="language" content="DE" />
-        <meta name="viewport" content="width=device-width" />
-        <title>Movie Explorer</title>
-        <link rel="stylesheet" type="text/css" href="resources/css/style.css" />
-        <link rel="stylesheet" type="text/css" href="lib/vendor.css" />
-        <link rel="stylesheet" href="lib/alchemy.min.css" />
 
-        <script type="text/javascript" src="lib/vendor.js"></script>
-        <script type="text/javascript" src="lib/alchemy.min.js"></script>
-        <script type="module" src="resources/js/app.js" defer></script>
-    </head>
+<head>
+    <meta charset="utf-8" />
+    <meta name="author" content="" />
+    <meta name="language" content="DE" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Movie Explorer</title>
+    <!-- Einbinden einer Web-Font über Google Fonts (nur damit die Demo besser aussieht) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="resources/css/style.css" />
+    <!-- Einbinden der Vis.js-Library für die Graphendarstellung -->
+    <script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+    <script type="module" src="resources/js/app.js" defer></script>
+</head>
 
-    <body></body>
+<body>
+
+    <h1>Movie Explorer</h1>
+    <!-- HTML-Element, in dem der Graph angezeigt werden soll -->
+    <div class="movie-graph"></div>
+</body>
+
 </html>

@@ -1,1 +1,37 @@
+:root {
+    /* CSS HEX */
+    --metallic-seaweed: #177e89ff;
+    --midnight-green-eagle-green: #084c61ff;
+    --cg-red: #db3a34ff;
+    --maximum-yellow-red: #ffc857ff;
+    --jet: #323031ff;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    background-color: var(--jet);
+    font-family: "Space Grotesk", sans-serif;
+    color: var(--maximum-yellow-red);
+}
+
+h1 {
+    width: 80vw;
+    text-align: center;
+    font-size: 3em;
+    font-weight: 500;
+}
+
+.movie-graph {
+    width: 80vw;
+    height: 80vh;
+    border-radius: 2px;
+    background-color: var(--jet);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+
 /* Fügen Sie hier Ihre CSS-Regeln ein. */

@@ -1,0 +1,102 @@
+{
+    "nodes": [{
+            "id": 0,
+            "label": "Action",
+            "group": "genre"
+        },
+        {
+            "id": 1,
+            "label": "Comedy",
+            "group": "genre"
+        },
+        {
+            "id": 2,
+            "label": "Science Fiction",
+            "group": "genre"
+        },
+        {
+            "id": 3,
+            "label": "A Movie",
+            "group": "movie"
+        },
+        {
+            "id": 4,
+            "label": "B Movie",
+            "group": "movie"
+        },
+        {
+            "id": 5,
+            "label": "C Movie",
+            "group": "movie"
+        },
+        {
+            "id": 6,
+            "label": "D Movie",
+            "group": "movie"
+        },
+        {
+            "id": 7,
+            "label": "E Movie",
+            "group": "movie"
+        },
+        {
+            "id": 8,
+            "label": "Actor One",
+            "group": "actor"
+        },
+        {
+            "id": 9,
+            "label": "Actor Two",
+            "group": "actor"
+        },
+        {
+            "id": 10,
+            "label": "Actor Three",
+            "group": "actor"
+        },
+        {
+            "id": 11,
+            "label": "Actor Four",
+            "group": "actor"
+        },
+        {
+            "id": 12,
+            "label": "Actor Five",
+            "group": "actor"
+        },
+        {
+            "id": 13,
+            "label": "Actor Six",
+            "group": "actor"
+        },
+        {
+            "id": 14,
+            "label": "Actor Seven",
+            "group": "actor"
+        }
+    ],
+    "edges": [{ "from": 0, "to": 3 },
+        { "from": 0, "to": 4 },
+        { "from": 1, "to": 4 },
+        { "from": 1, "to": 5 },
+        { "from": 2, "to": 6 },
+        { "from": 2, "to": 7 },
+        { "from": 3, "to": 7 },
+        { "from": 3, "to": 8 },
+        { "from": 3, "to": 9 },
+        { "from": 4, "to": 10 },
+        { "from": 4, "to": 8 },
+        { "from": 4, "to": 12 },
+        { "from": 5, "to": 8 },
+        { "from": 5, "to": 9 },
+        { "from": 5, "to": 7 },
+        { "from": 5, "to": 11 },
+        { "from": 5, "to": 10 },
+        { "from": 6, "to": 11 },
+        { "from": 6, "to": 12 },
+        { "from": 6, "to": 13 },
+        { "from": 6, "to": 14 },
+        { "from": 7, "to": 12 },
+        { "from": 7, "to": 13 }
+    ]
+}
